@@ -13,12 +13,14 @@ class AppConstant {
 //      "http://ilomadev.com/qmanager_production/public/images/";
 
 //  //Base URL Staging
- // static String API_BASE_URL = "https://cvbuildertobeu.com/qmanager/api/";
- // static String IMG_BASE_URL = "https://cvbuildertobeu.com/qmanager/public/images/";
+  // static String API_BASE_URL = "https://cvbuildertobeu.com/qmanager/api/";
+  // static String IMG_BASE_URL = "https://cvbuildertobeu.com/qmanager/public/images/";
 
   //Base URL Production
-  static String API_BASE_URL = "https://qmanager.to-be-u.com/qmanager/api/";
-  static String IMG_BASE_URL = "https://qmanager.to-be-u.com/qmanager/public/images/";
+  static String API_BASE_URL =
+      "https://qmanager.to-be-u.com/qmanager_demo/api/";
+  static String IMG_BASE_URL =
+      "https://qmanager.to-be-u.com/qmanager_demo/public/images/";
 
   static String CURRENT_IOS_VERSION = "1.0.3";
   static String CURRENT_ANDROID_VERSION = "1.0.2";

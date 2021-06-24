@@ -1,22 +1,19 @@
-import 'dart:math';
+import 'dart:io';
+import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:qmanagement/model/StateModel.dart';
 import 'package:qmanagement/model/UserModel.dart';
 import 'package:qmanagement/screen/CustomerHomeScreen.dart';
 import 'package:qmanagement/utils/APIManager.dart';
 import 'package:qmanagement/utils/AppColors.dart';
+import 'package:qmanagement/utils/AppConstant.dart';
 import 'package:qmanagement/utils/AppLocalizations.dart';
 import 'package:qmanagement/utils/SessionManager.dart';
 import 'package:qmanagement/utils/Utility.dart';
-import 'dart:ui';
-import 'package:image_picker/image_picker.dart';
-import 'package:flutter/cupertino.dart';
-import 'dart:io';
-import 'package:qmanagement/utils/AppConstant.dart';
-import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -568,7 +565,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
       key: _scaffoldKey,
       body: Container(
         child: new Stack(

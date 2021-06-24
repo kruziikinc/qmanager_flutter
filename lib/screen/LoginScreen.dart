@@ -3,10 +3,9 @@ import 'dart:ui';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:qmanagement/model/UserModel.dart';
-import 'package:qmanagement/screen/ForgotPasswordScreen.dart';
 import 'package:qmanagement/screen/CustomerHomeScreen.dart';
+import 'package:qmanagement/screen/ForgotPasswordScreen.dart';
 import 'package:qmanagement/screen/SignUpScreen.dart';
 import 'package:qmanagement/utils/APIManager.dart';
 import 'package:qmanagement/utils/AppColors.dart';
@@ -197,32 +196,32 @@ class _LoginScreenState extends State<LoginScreen> {
       onWillPop: _onWillPop,
       child: Scaffold(
         backgroundColor: Colors.white,
-        resizeToAvoidBottomPadding: false,
+        // resizeToAvoidBottomPadding: false,
         key: _scaffoldKey,
         body: Container(
           child: new Stack(
-                  fit: StackFit.expand,
-                  children: <Widget>[
-                    new Column(
-                      children: <Widget>[
-                        Stack(
-                          children: <Widget>[
-                            new Container(
-                              //color: Theme.of(context).primaryColor,
-                              //color: Colors.red,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.rectangle,
-                                  image: DecorationImage(
-                                      image: new AssetImage(
-                                          "assets/images/bg_top_home.png"),
-                                      fit: BoxFit.fill)),
-                              child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 50),
-                                  child: Container(
-                                    width: 100,
-                                    height: 100,
+            fit: StackFit.expand,
+            children: <Widget>[
+              new Column(
+                children: <Widget>[
+                  Stack(
+                    children: <Widget>[
+                      new Container(
+                        //color: Theme.of(context).primaryColor,
+                        //color: Colors.red,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            image: DecorationImage(
+                                image: new AssetImage(
+                                    "assets/images/bg_top_home.png"),
+                                fit: BoxFit.fill)),
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 50),
+                            child: Container(
+                              width: 100,
+                              height: 100,
 //                            decoration: BoxDecoration(
 //                                shape: BoxShape.rectangle,
 //                                image: DecorationImage(
@@ -230,63 +229,61 @@ class _LoginScreenState extends State<LoginScreen> {
 //                                    fit: BoxFit.fill
 //                                )
 //                            ),
-                                  ),
-                                ),
-                              ),
                             ),
-                            new Padding(
-                              padding: EdgeInsets.only(top: 80),
-                              child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 0),
-                                  child: Container(
-                                    width: 130,
-                                    height: 130,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.rectangle,
-                                        image: DecorationImage(
-                                            image: new AssetImage(
-                                                "assets/images/img_logo_login.png"),
-                                            fit: BoxFit.fill)),
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
+                          ),
+                        ),
+                      ),
+                      new Padding(
+                        padding: EdgeInsets.only(top: 80),
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 0),
+                            child: Container(
+                              width: 130,
+                              height: 130,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  image: DecorationImage(
+                                      image: new AssetImage(
+                                          "assets/images/img_logo_login.png"),
+                                      fit: BoxFit.fill)),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Expanded(
+                    child: new Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 0, top: 0),
+                          child: Center(
+                            child: Text(
+                              "By To Be U",
+                              style: TextStyle(
+                                  color: AppColors.colorRed,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Expanded(
-                          child: new Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(bottom: 0, top: 0),
-                                child: Center(
-                                  child: Text(
-                                    "By To Be U",
-                                    style: TextStyle(
-                                        color: AppColors.colorRed,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Expanded(
-                                child: SingleChildScrollView(
-                                  child: new Column(
+                          child: SingleChildScrollView(
+                            child: new Column(
+                              children: <Widget>[
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 0, top: 10, left: 20),
+                                  child: new Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            bottom: 0, top: 10, left: 20),
-                                        child: new Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: <Widget>[
 //                                    new Radio(
 //                                      value: 1,
 //                                      groupValue: _radioValue,
@@ -307,145 +304,138 @@ class _LoginScreenState extends State<LoginScreen> {
 //                            AppLocalizations.of(context).translate('vendor'),
 //                            style: new TextStyle(fontSize: 16.0, color: AppColors.textColor),
 //                          ),
-                                          ],
-                                        ),
-                                      ),
-                                      new Padding(
-                                        padding:
-                                            EdgeInsets.only(bottom: 0, top: 20),
-                                        child: _input("Email", _email, false,
-                                            TextInputType.emailAddress),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      new Padding(
-                                        padding:
-                                            EdgeInsets.only(bottom: 0, top: 0),
-                                        child: _inputPass("Password", _password,
-                                            true, TextInputType.text),
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 20, right: 30),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: <Widget>[
-                                              Visibility(
-                                                visible: false,
-                                                child: GestureDetector(
-                                                  child: Row(
-                                                    children: <Widget>[
-                                                      Checkbox(
-                                                        // checkColor: Colors.white,
-                                                        //  activeColor: Colors.red,
-                                                        value: _agreedToTOS,
-                                                        onChanged:
-                                                            _setAgreedToTOS,
-                                                      ),
-                                                      GestureDetector(
-                                                        onTap: () =>
-                                                            _setAgreedToTOS(
-                                                                !_agreedToTOS),
-                                                        child: new Text(
-                                                          'Keep me Logged in',
-                                                          style: TextStyle(
-                                                              color: grayColor,
-                                                              fontSize: 14,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .normal),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  onTap: () {
-                                                    // Navigator.of(context).pushNamed(SignUp.routeName);
-                                                  },
-                                                ),
-                                              ),
-                                              GestureDetector(
-                                                  child: new Container(
-                                                    child: Text(
-                                                      "Forgot Password?",
-                                                      style: TextStyle(
-                                                          color: grayColor,
-                                                          fontSize: 14,
-                                                          fontWeight: FontWeight
-                                                              .normal),
-                                                      textAlign:
-                                                          TextAlign.right,
-                                                    ),
-                                                  ),
-                                                  onTap: () {
-                                                    Navigator.of(context)
-                                                        .pushNamed(
-                                                            ForgotPasswordScreen
-                                                                .routeName);
-                                                  }),
-                                            ],
-                                          )),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          top: 10,
-                                          //bottom: MediaQuery.of(context).viewInsets.bottom
-                                        ),
-                                        child: Container(
-                                          child: _button(
-                                              AppLocalizations.of(context)
-                                                  .translate('str_login'),
-                                              Colors.red,
-                                              Colors.red,
-                                              Colors.red,
-                                              Colors.white,
-                                              _btnLoginClicked),
-                                          height: 50,
-                                          width: 200,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 15,
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 0,
-                                            bottom: MediaQuery.of(context)
-                                                .viewInsets
-                                                .bottom),
-                                        child: Container(
-                                          child: _outlineButton(
-                                              AppLocalizations.of(context)
-                                                  .translate('sign_up'),
-                                              Colors.red,
-                                              Colors.red,
-                                              Colors.white,
-                                              grayColor,
-                                              _btnSignUpClicked),
-                                          height: 40,
-                                          width: 150,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
                                     ],
                                   ),
                                 ),
-                              ),
-                            ],
+                                new Padding(
+                                  padding: EdgeInsets.only(bottom: 0, top: 20),
+                                  child: _input("Email", _email, false,
+                                      TextInputType.emailAddress),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                new Padding(
+                                  padding: EdgeInsets.only(bottom: 0, top: 0),
+                                  child: _inputPass("Password", _password, true,
+                                      TextInputType.text),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Padding(
+                                    padding:
+                                        EdgeInsets.only(left: 20, right: 30),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Visibility(
+                                          visible: false,
+                                          child: GestureDetector(
+                                            child: Row(
+                                              children: <Widget>[
+                                                Checkbox(
+                                                  // checkColor: Colors.white,
+                                                  //  activeColor: Colors.red,
+                                                  value: _agreedToTOS,
+                                                  onChanged: _setAgreedToTOS,
+                                                ),
+                                                GestureDetector(
+                                                  onTap: () => _setAgreedToTOS(
+                                                      !_agreedToTOS),
+                                                  child: new Text(
+                                                    'Keep me Logged in',
+                                                    style: TextStyle(
+                                                        color: grayColor,
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.normal),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            onTap: () {
+                                              // Navigator.of(context).pushNamed(SignUp.routeName);
+                                            },
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                            child: new Container(
+                                              child: Text(
+                                                "Forgot Password?",
+                                                style: TextStyle(
+                                                    color: grayColor,
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal),
+                                                textAlign: TextAlign.right,
+                                              ),
+                                            ),
+                                            onTap: () {
+                                              Navigator.of(context).pushNamed(
+                                                  ForgotPasswordScreen
+                                                      .routeName);
+                                            }),
+                                      ],
+                                    )),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 10,
+                                    //bottom: MediaQuery.of(context).viewInsets.bottom
+                                  ),
+                                  child: Container(
+                                    child: _button(
+                                        AppLocalizations.of(context)
+                                            .translate('str_login'),
+                                        Colors.red,
+                                        Colors.red,
+                                        Colors.red,
+                                        Colors.white,
+                                        _btnLoginClicked),
+                                    height: 50,
+                                    width: 200,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      top: 0,
+                                      bottom: MediaQuery.of(context)
+                                          .viewInsets
+                                          .bottom),
+                                  child: Container(
+                                    child: _outlineButton(
+                                        AppLocalizations.of(context)
+                                            .translate('sign_up'),
+                                        Colors.red,
+                                        Colors.red,
+                                        Colors.white,
+                                        grayColor,
+                                        _btnSignUpClicked),
+                                    height: 40,
+                                    width: 150,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -453,7 +443,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   bool isValid() {
     if (_email.text.isEmpty) {
-     Utility.showToastMessage("Please enter email");
+      Utility.showToastMessage("Please enter email");
       return false;
     } else if (_password.text.isEmpty) {
       Utility.showToastMessage("Please enter password");
@@ -483,7 +473,8 @@ class _LoginScreenState extends State<LoginScreen> {
       Utility().currentUser = model;
       SessionManager().setUserModel(model);
       Utility.showToastMessage(message);
-      FirebaseMessaging().subscribeToTopic(AppConstant.TOPIC + model.id.toString());
+      FirebaseMessaging()
+          .subscribeToTopic(AppConstant.TOPIC + model.id.toString());
       Navigator.of(context).pushNamed(CustomerHomeScreen.routeName);
     }, (message) {
       Utility.showToastMessage(message);

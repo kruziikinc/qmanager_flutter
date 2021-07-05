@@ -1,0 +1,126 @@
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:34
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:128
+-keep class com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:127
+-keep class com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:164
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:99
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:149
+-keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:114
+-keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:158
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:137
+-keep class com.shinow.qrscan.SecondActivity { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:180
+-keep class com.squareup.picasso.PicassoProvider { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:45
+-keep class com.tobeu.qmanager.MainActivity { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:173
+-keep class com.uuzuche.lib_zxing.activity.CaptureActivity { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:34
+-keep class io.flutter.app.FlutterApplication { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:94
+-keep class io.flutter.plugins.firebasemessaging.FlutterFirebaseMessagingService { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:139
+-keep class io.flutter.plugins.imagepicker.ImagePickerFileProvider { <init>(); }
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/app/intermediates/merged_manifests/release/AndroidManifest.xml:122
+-keep class io.flutter.plugins.urllauncher.WebViewActivity { <init>(); }
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_title_material.xml:57
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_material.xml:52
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_button_bar_material.xml:43
+-keep class android.widget.Space { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_select_dialog_material.xml:23
+-keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_action_menu_item_layout.xml:17
+-keep class androidx.appcompat.view.menu.ActionMenuItemView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_expanded_menu_layout.xml:17
+-keep class androidx.appcompat.view.menu.ExpandedMenuView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_popup_menu_item_layout.xml:17
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_list_menu_item_layout.xml:17
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_cascading_menu_item_layout.xml:20
+-keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:27
+-keep class androidx.appcompat.widget.ActionBarContainer { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:43
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_action_mode_bar.xml:19
+-keep class androidx.appcompat.widget.ActionBarContextView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:17
+-keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_action_menu_layout.xml:17
+-keep class androidx.appcompat.widget.ActionMenuView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_activity_chooser_view.xml:19
+-keep class androidx.appcompat.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_material.xml:18
+-keep class androidx.appcompat.widget.AlertDialogLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_button_bar_material.xml:26
+-keep class androidx.appcompat.widget.ButtonBarLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_content_include.xml:19
+-keep class androidx.appcompat.widget.ContentFrameLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_title_material.xml:45
+-keep class androidx.appcompat.widget.DialogTitle { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_simple_overlay_action_mode.xml:23
+-keep class androidx.appcompat.widget.FitWindowsFrameLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_simple.xml:17
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_dialog_title_material.xml:22
+-keep class androidx.appcompat.widget.FitWindowsLinearLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_search_view.xml:75
+-keep class androidx.appcompat.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:36
+-keep class androidx.appcompat.widget.Toolbar { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_simple_overlay_action_mode.xml:32
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_screen_simple.xml:25
+-keep class androidx.appcompat.widget.ViewStubCompat { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_bottom_sheet_dialog.xml:26
+-keep class androidx.coordinatorlayout.widget.CoordinatorLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/3666e0fff67b3514e2b927b2bc75469f/appcompat-1.1.0/res/layout/abc_alert_dialog_material.xml:41
+-keep class androidx.core.widget.NestedScrollView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_bottom_navigation_item.xml:27
+-keep class com.google.android.material.internal.BaselineLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_text_input_password_icon.xml:18
+-keep class com.google.android.material.internal.CheckableImageButton { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_navigation_item.xml:17
+-keep class com.google.android.material.internal.NavigationMenuItemView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_navigation_menu.xml:17
+-keep class com.google.android.material.internal.NavigationMenuView { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/mtrl_layout_snackbar.xml:18
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_layout_snackbar.xml:18
+-keep class com.google.android.material.snackbar.Snackbar$SnackbarLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/mtrl_layout_snackbar_include.xml:18
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/59e15bd70909e35b425b82adaf626acb/material-1.0.0/res/layout/design_layout_snackbar_include.xml:18
+-keep class com.google.android.material.snackbar.SnackbarContentLayout { <init>(...); }
+
+# Referenced at /Users/amansingh/Kruziik/Dev/Work/Projects/qmanager_flutter/build/qrscan/intermediates/packaged_res/release/layout/my_camera.xml:13
+# Referenced at /Users/amansingh/.gradle/caches/transforms-2/files-2.1/b4834417f7f0c50d6d3ac8d1d57f5a68/android-zxingLibrary-0.1.2-PRE/res/layout/fragment_capture.xml:12
+-keep class com.uuzuche.lib_zxing.view.ViewfinderView { <init>(...); }
+

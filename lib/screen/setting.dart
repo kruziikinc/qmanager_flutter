@@ -1,8 +1,8 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:qmanagement/screen/LoginScreen.dart';
 import 'package:qmanagement/screen/Profile.dart';
 import 'package:qmanagement/screen/changePassword.dart';
+import 'package:qmanagement/screen/LoginScreen.dart';
 import 'package:qmanagement/utils/APIManager.dart';
 import 'package:qmanagement/utils/AppConstant.dart';
 import 'package:qmanagement/utils/SessionManager.dart';
@@ -43,7 +43,7 @@ class _SettingScreenState extends State<SettingScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      // resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomPadding: false,
       body: new Stack(
         fit: StackFit.expand,
         children: <Widget>[
@@ -277,13 +277,15 @@ class _SettingScreenState extends State<SettingScreen>
 
   void performLogout() {
     SessionManager().getDeviceToken((resultString) {
-      if (resultString != null) {
+      if(resultString != null){
         logoutAPI(resultString);
       }
     });
+
   }
 
-  void logoutAPI(String fcmToken) {
+  void logoutAPI(String fcmToken ) {
+
     Map<String, dynamic> bodyParams = {
       "user_id": Utility().currentUser.id.toString(),
       "token": fcmToken
@@ -291,20 +293,21 @@ class _SettingScreenState extends State<SettingScreen>
 
     Utility.showLoader(context);
     new APIManger().apiRequest(AppConstant.API_LOGOUT, bodyParams,
-        (json, message) {
-      Utility.hideLoader(context);
-      Utility.showToastMessage(message);
-      FirebaseMessaging().unsubscribeFromTopic(
-          AppConstant.TOPIC + Utility().currentUser.id.toString());
-      SessionManager().clearSession();
-      Navigator.pop(context);
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (BuildContext context) => LoginScreen()));
-    }, (message) {
-      Utility.showToastMessage(message);
-      Utility.hideLoader(context);
-    });
+            (json, message) {
+          Utility.hideLoader(context);
+          Utility.showToastMessage(message);
+          FirebaseMessaging().unsubscribeFromTopic(AppConstant.TOPIC + Utility().currentUser.id.toString());
+          SessionManager().clearSession();
+          Navigator.pop(context);
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (BuildContext context) => LoginScreen()));
+
+        }, (message) {
+          Utility.showToastMessage(message);
+          Utility.hideLoader(context);
+        });
   }
+
 
 //  @override
 //  void didChangeAppLifecycleState(AppLifecycleState state) {

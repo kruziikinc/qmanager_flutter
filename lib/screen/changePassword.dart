@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:qmanagement/utils/APIManager.dart';
 import 'package:qmanagement/utils/AppConstant.dart';
+import 'package:qmanagement/utils/SessionManager.dart';
 import 'package:qmanagement/utils/Utility.dart';
 
 class ChangePassword extends StatefulWidget {
@@ -12,22 +13,26 @@ class ChangePassword extends StatefulWidget {
 }
 
 class _ChangePasswordState extends State<ChangePassword> {
+
   final GlobalKey<ScaffoldState> _scafolledKey = new GlobalKey<ScaffoldState>();
   TextEditingController _old_password = new TextEditingController();
   TextEditingController _new_password = new TextEditingController();
   TextEditingController _confirm_password = new TextEditingController();
   bool _visible = true;
 
+
   void _togglePasswordVisibility() {
     setState(() => _visible = !_visible);
+
   }
+
 
   @override
   Widget build(BuildContext context) {
     Color grayColor = Color(int.parse("0xFF595856"));
     //input widget
-    Widget _input(String hint, TextEditingController controller, bool obsecure,
-        TextInputType type) {
+    Widget _input(String hint, TextEditingController controller,
+        bool obsecure, TextInputType type) {
       return Container(
         padding: EdgeInsets.only(left: 30, right: 30),
         child: TextField(
@@ -35,12 +40,13 @@ class _ChangePasswordState extends State<ChangePassword> {
           obscureText: obsecure,
           keyboardType: type,
           textInputAction: TextInputAction.next,
-          onSubmitted: (_) =>
-              FocusScope.of(context).nextFocus(), // move focus to next
-          style: TextStyle(fontSize: 16, color: grayColor),
+          onSubmitted: (_) => FocusScope.of(context).nextFocus(), // move focus to next
+          style: TextStyle(
+              fontSize: 16,
+              color: grayColor
+          ),
           decoration: InputDecoration(
-            labelStyle: TextStyle(
-                fontWeight: FontWeight.normal, fontSize: 16, color: grayColor),
+            labelStyle: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: grayColor),
             labelText: hint,
             contentPadding: EdgeInsets.only(left: 15, right: 15),
             enabledBorder: OutlineInputBorder(
@@ -71,14 +77,13 @@ class _ChangePasswordState extends State<ChangePassword> {
           obscureText: _visible,
           keyboardType: type,
           textInputAction: isDone ? TextInputAction.done : TextInputAction.next,
-          onSubmitted: (_) =>
-              FocusScope.of(context).nextFocus(), // move focus to next
-          style: TextStyle(fontSize: 16, color: grayColor),
+          onSubmitted: (_) => FocusScope.of(context).nextFocus(), // move focus to next
+          style: TextStyle(
+              fontSize: 16,
+              color: grayColor
+          ),
           decoration: InputDecoration(
-              labelStyle: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 16,
-                  color: grayColor),
+              labelStyle: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: grayColor),
               labelText: hint,
               contentPadding: EdgeInsets.only(left: 15, right: 15),
               enabledBorder: OutlineInputBorder(
@@ -98,10 +103,12 @@ class _ChangePasswordState extends State<ChangePassword> {
               suffixIcon: GestureDetector(
                 onTap: _togglePasswordVisibility,
                 child: Icon(_visible ? Icons.visibility : Icons.visibility_off),
-              )),
+              )
+          ),
         ),
       );
     }
+
 
     //button widget
     Widget _button(String text, Color splashColor, Color highlightColor,
@@ -115,9 +122,9 @@ class _ChangePasswordState extends State<ChangePassword> {
         color: fillColor,
         shape: RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(30.0)),
-        child: Text(text,
-            style: TextStyle(
-                color: textColor, fontSize: 16, fontWeight: FontWeight.bold)),
+        child: Text(
+            text,
+            style: TextStyle(color: textColor, fontSize: 16 , fontWeight: FontWeight.bold)),
         onPressed: () {
           function();
         },
@@ -126,14 +133,14 @@ class _ChangePasswordState extends State<ChangePassword> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      // resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomPadding: false,
       key: _scafolledKey,
       body: new Stack(
         fit: StackFit.expand,
         children: <Widget>[
           new Column(
-            children: <Widget>[
-              Stack(
+            children: <Widget>
+            [ Stack(
                 children: <Widget>[
                   new Container(
                     //color: Theme.of(context).primaryColor,
@@ -142,14 +149,15 @@ class _ChangePasswordState extends State<ChangePassword> {
                     decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image:
-                                new AssetImage("assets/images/bg_top_home.png"),
-                            fit: BoxFit.fill)),
+                            image: new AssetImage("assets/images/bg_top_home.png"),
+                            fit: BoxFit.fill
+                        )
+                    ),
                     child: Center(
                       child: Column(
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.only(top: 30, left: 20),
+                            padding: const EdgeInsets.only(top: 30 , left: 20),
                             child: Row(
                               children: <Widget>[
                                 IconButton(
@@ -163,16 +171,19 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   },
                                 ),
                                 new Padding(
-                                  padding: EdgeInsets.only(left: 5),
+                                  padding: EdgeInsets.only(
+                                      left: 5
+                                  ),
                                   child: Container(
                                     width: 50,
                                     height: 50,
                                     decoration: BoxDecoration(
                                         shape: BoxShape.rectangle,
                                         image: DecorationImage(
-                                            image: new AssetImage(
-                                                "assets/images/ic_logo_sign.png"),
-                                            fit: BoxFit.fill)),
+                                            image: new AssetImage("assets/images/ic_logo_sign.png"),
+                                            fit: BoxFit.fill
+                                        )
+                                    ),
                                   ),
                                 ),
                               ],
@@ -207,65 +218,59 @@ class _ChangePasswordState extends State<ChangePassword> {
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle,
                               image: DecorationImage(
-                                  image: new AssetImage(
-                                      "assets/images/img_pass.png"),
-                                  fit: BoxFit.fill)),
+                                  image: new AssetImage("assets/images/img_pass.png"),
+                                  fit: BoxFit.fill
+                              )
+                          ),
                         ),
                       ),
                     ),
                   )
                 ],
               ),
+
               Expanded(
                 child: SingleChildScrollView(
-                  child: new Column(
+                  child:  new Column(
                     children: <Widget>[
                       SizedBox(
                         height: 10,
                       ),
+
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 0, top: 20),
+                        padding: const EdgeInsets.only(bottom: 0 , top: 20),
                         child: Center(
-                          child: Text(
-                            "Change Password",
-                            style: TextStyle(
-                                color: grayColor,
-                                fontSize: 18,
-                                fontWeight: FontWeight.normal),
-                          ),
+                          child: Text( "Change Password",
+                            style: TextStyle(color: grayColor,fontSize: 18,fontWeight: FontWeight.normal),),
                         ),
+
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      new Padding(
-                        padding: EdgeInsets.only(bottom: 0, top: 10),
-                        child: _inputPass("Old Password", _old_password, true,
-                            TextInputType.text, false),
+
+                      new Padding(padding: EdgeInsets.only(bottom: 0 , top: 10),
+                        child: _inputPass("Old Password", _old_password , true, TextInputType.text,false),
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      new Padding(
-                        padding: EdgeInsets.only(bottom: 0, top: 10),
-                        child: _inputPass("New Password", _new_password, true,
-                            TextInputType.text, false),
+                      new Padding(padding: EdgeInsets.only(bottom: 0 , top: 10),
+                        child: _inputPass("New Password", _new_password , true, TextInputType.text,false),
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      new Padding(
-                        padding: EdgeInsets.only(bottom: 0, top: 10),
-                        child: _inputPass("Confirm Password", _confirm_password,
-                            true, TextInputType.text, true),
+                      new Padding(padding: EdgeInsets.only(bottom: 0 , top: 10),
+                        child: _inputPass("Confirm Password", _confirm_password , true, TextInputType.text,true),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
                             top: 30,
                             bottom: MediaQuery.of(context).viewInsets.bottom),
                         child: Container(
-                          child: _button("Submit", Colors.red, Colors.red,
-                              Colors.red, Colors.white, _btnSubmitClicked),
+                          child: _button("Submit", Colors.red, Colors.red, Colors.red,
+                              Colors.white, _btnSubmitClicked),
                           height: 50,
                           width: 200,
                         ),
@@ -277,9 +282,11 @@ class _ChangePasswordState extends State<ChangePassword> {
                   ),
                 ),
               )
+
             ],
           )
         ],
+
       ),
     );
   }
@@ -291,30 +298,33 @@ class _ChangePasswordState extends State<ChangePassword> {
     }
   }
 
+
   void changePasswordAPI() {
+
     Map<String, dynamic> bodyParams = {
-      "user_id": Utility().currentUser.id.toString(),
+      "user_id" : Utility().currentUser.id.toString(),
       "password": _new_password.text,
       "connfirm_password": _confirm_password.text,
-      "old_password": _old_password.text
+      "old_password":_old_password.text
     };
 
     Utility.showLoader(context);
     new APIManger().apiRequest(AppConstant.API_UPDATE_PASS, bodyParams,
-        (json, message) {
-      Utility.hideLoader(context);
-      Utility.showToastMessage(message);
-      Navigator.pop(context);
-    }, (message) {
-      Utility.showToastMessage(message);
-      Utility.hideLoader(context);
-    });
+            (json, message) {
+          Utility.hideLoader(context);
+          Utility.showToastMessage(message);
+          Navigator.pop(context);
+        }, (message) {
+          Utility.showToastMessage(message);
+          Utility.hideLoader(context);
+        });
   }
+
 
   bool isValid() {
     if (_old_password.text.isEmpty) {
-      Fluttertoast.showToast(msg: "Please enter old password");
-      return false;
+        Fluttertoast.showToast(msg: "Please enter old password");
+        return false;
     }
 
     if (_new_password.text.isEmpty) {
@@ -328,8 +338,7 @@ class _ChangePasswordState extends State<ChangePassword> {
     }
 
     if (_confirm_password.text != _new_password.text) {
-      Fluttertoast.showToast(
-          msg: "New password and confirm password not matched");
+      Fluttertoast.showToast(msg: "New password and confirm password not matched");
       return false;
     }
 

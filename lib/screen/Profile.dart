@@ -1,9 +1,5 @@
-import 'dart:io';
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:qmanagement/model/StateModel.dart';
 import 'package:qmanagement/model/UserModel.dart';
 import 'package:qmanagement/utils/APIManager.dart';
@@ -12,6 +8,10 @@ import 'package:qmanagement/utils/AppConstant.dart';
 import 'package:qmanagement/utils/AppLocalizations.dart';
 import 'package:qmanagement/utils/SessionManager.dart';
 import 'package:qmanagement/utils/Utility.dart';
+import 'dart:ui';
+import 'package:image_picker/image_picker.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io';
 
 class Profile extends StatefulWidget {
   static const routeName = 'profile-screen';
@@ -597,7 +597,7 @@ class _ProfileState extends State<Profile> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      // resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomPadding: false,
       key: _scaffoldKey,
       body: Container(
         child: new Stack(
